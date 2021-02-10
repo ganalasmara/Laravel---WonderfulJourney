@@ -21,6 +21,7 @@
 </head>
 <body>
     <div id="app">
+        
         @guest
         <nav class="navbar fixed-top navbar-custom navbar-expand-lg navbar-light">
             <div class="container">
@@ -40,8 +41,8 @@
                           Category
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="#">Beach</a>
-                          <a class="dropdown-item" href="#">Mountain</a>
+                          <a class="dropdown-item" href="/category/2">Beach</a>
+                          <a class="dropdown-item" href="/category/1">Mountain</a>
                         </div>
                       </li>
                     <li class="nav-item">

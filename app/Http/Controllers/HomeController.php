@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Article;
+use App\Category;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -11,10 +12,6 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
 
     /**
      * Show the application dashboard.
@@ -26,5 +23,19 @@ class HomeController extends Controller
         $article = Article::paginate(6);
 
         return view('welcome')->with('article',$article);
+    }
+
+    public function detail($id)
+    {
+        $article = Article::findOrfail($id);
+
+        return view('details')->with('article',$article);
+    }
+
+    public function category($id){
+        $article = Article::where('categories_id', $id)->paginate(6);
+        $category = Category::where('id', $id)->firstOrfail();
+
+        return view('category')->with('article',$article)->with('category',$category);
     }
 }

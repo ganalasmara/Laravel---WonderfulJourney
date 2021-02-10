@@ -4,8 +4,8 @@
     <div class="container">
         <div class="row mt-5">
             <div class="col mt-5">
-            <p class="quote">Wonderful Journey</p>
-            <p class="quote">Blog of Indonesia Tourism</p>
+            <p class="quote">{{ $category->name }}</p>
+
         </div>
         </div>
     
