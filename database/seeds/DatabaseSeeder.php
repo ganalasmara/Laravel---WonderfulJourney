@@ -48,6 +48,21 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'title'=>'Pantai Balangan',
+                'user_id'=>'2',
+                'categories_id'=>'2',
+                'description'=>'Pantai Balangan adalah salah satu pantai tersembunyi di Bali yang belakangan ini sedang ramai dibincangkan. Pantai yang memiliki tebing sebagai salah satu ikon unik nya memiliki banyak homestay yang bisa digunakan untuk para tourist yang ingin menginap di daerah Pantai Balangan.',
+                'photo'=>'../img/Pantai-Balangan.jpg'
+            ],
+            [
+                'title'=>'Gunung Agung',
+                'user_id'=>'2',
+                'categories_id'=>'1',
+                'description'=>'Gunung Agung adalah salah satu gunung paling terkenal dan terbesar di bali. Gunung Agung dapat didaki dengan lama perjalanan 8 Jam.',
+                'photo'=>'../img/gunungagung.jpg'
+
+            ],
+            [
+                'title'=>'Pantai Balangan',
                 'user_id'=>'1',
                 'categories_id'=>'2',
                 'description'=>'Pantai Balangan adalah salah satu pantai tersembunyi di Bali yang belakangan ini sedang ramai dibincangkan. Pantai yang memiliki tebing sebagai salah satu ikon unik nya memiliki banyak homestay yang bisa digunakan untuk para tourist yang ingin menginap di daerah Pantai Balangan.',
@@ -55,7 +70,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'title'=>'Gunung Agung',
-                'user_id'=>'1',
+                'user_id'=>'2',
                 'categories_id'=>'1',
                 'description'=>'Gunung Agung adalah salah satu gunung paling terkenal dan terbesar di bali. Gunung Agung dapat didaki dengan lama perjalanan 8 Jam.',
                 'photo'=>'../img/gunungagung.jpg'
@@ -78,22 +93,7 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'title'=>'Pantai Balangan',
-                'user_id'=>'1',
-                'categories_id'=>'2',
-                'description'=>'Pantai Balangan adalah salah satu pantai tersembunyi di Bali yang belakangan ini sedang ramai dibincangkan. Pantai yang memiliki tebing sebagai salah satu ikon unik nya memiliki banyak homestay yang bisa digunakan untuk para tourist yang ingin menginap di daerah Pantai Balangan.',
-                'photo'=>'../img/Pantai-Balangan.jpg'
-            ],
-            [
-                'title'=>'Gunung Agung',
-                'user_id'=>'1',
-                'categories_id'=>'1',
-                'description'=>'Gunung Agung adalah salah satu gunung paling terkenal dan terbesar di bali. Gunung Agung dapat didaki dengan lama perjalanan 8 Jam.',
-                'photo'=>'../img/gunungagung.jpg'
-
-            ],
-            [
-                'title'=>'Pantai Balangan',
-                'user_id'=>'1',
+                'user_id'=>'2',
                 'categories_id'=>'2',
                 'description'=>'Pantai Balangan adalah salah satu pantai tersembunyi di Bali yang belakangan ini sedang ramai dibincangkan. Pantai yang memiliki tebing sebagai salah satu ikon unik nya memiliki banyak homestay yang bisa digunakan untuk para tourist yang ingin menginap di daerah Pantai Balangan.',
                 'photo'=>'../img/Pantai-Balangan.jpg'

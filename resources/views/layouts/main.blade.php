@@ -77,10 +77,10 @@
                     <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                     <a class="nav-link" href="/">Profile</a>
+                     <a class="nav-link" href="/profile">Profile</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="/about">Blog</a>
+                    <a class="nav-link" href="/myblog">Blog</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -119,10 +119,10 @@
                     <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                     <a class="nav-link" href="/">Blog List</a>
+                     <a class="nav-link" href="/blog">Blog List</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="/about">User List</a>
+                    <a class="nav-link" href="/user">User List</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
