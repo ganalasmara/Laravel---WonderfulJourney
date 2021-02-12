@@ -13,10 +13,10 @@
                   </tr>
                 </thead>
                 <tbody>
-                    @foreach ($article as $ar)
+                    @foreach ($article as $r)
                   <tr>
-                    <td><a href="/detail/{{ $ar->id }}"> {{ $ar->title }}</a></td>
-                    <td><a href="/myblog/delete/{{ $ar->id }}" type="button" class="btn btn-primary">Delete</a></td>
+                    <td><a href="/detail/{{ $r->id }}"> {{ $r->title }}</a></td>
+                    <td><a href="/myblog/delete/{{ $r->id }}" type="button" class="btn btn-primary">Delete</a></td>
                   </tr>
                     @endforeach
                 </tbody>

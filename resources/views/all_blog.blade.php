@@ -16,12 +16,12 @@
                   </tr>
                 </thead>
                 <tbody>
-                    @foreach ($article as $ar)
+                    @foreach ($article as $r)
                   <tr>
-                    <td>{{ $ar->title }}</td>
-                    <td>{{ $ar->user->name }}</td>
-                    <td>{{ $ar->category->name }}</td>
-                    <td><a href="/blog/delete/{{ $ar->id }}" type="button" class="btn btn-primary">Delete</a></td>
+                    <td>{{ $r->title }}</td>
+                    <td>{{ $r->user->name }}</td>
+                    <td>{{ $r->category->name }}</td>
+                    <td><a href="/blog/delete/{{ $r->id }}" type="button" class="btn btn-primary">Delete</a></td>
                   </tr>
                     @endforeach
                 </tbody>

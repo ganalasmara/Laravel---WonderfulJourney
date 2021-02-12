@@ -34,14 +34,14 @@ class HomeController extends Controller
     {
         $article = Article::findOrfail($id);
 
-        return view('details',['article'=>$article]);
+        return view('article_details',['article'=>$article]);
     }
 
     public function category($id){
         $article = Article::where('category_id', $id)->paginate(6);
         $category = Category::where('id', $id)->firstOrfail();
 
-        return view('category',['article'=>$article],['category'=>$category]);
+        return view('article_category',['article'=>$article],['category'=>$category]);
     }
 
     
@@ -49,7 +49,7 @@ class HomeController extends Controller
     public function profile(){
         $user = Auth::user();
 
-        return view('profile',['user'=>$user]);
+        return view('my_profile',['user'=>$user]);
     }
 
     public function profile_update(Request $req,$id){
@@ -68,7 +68,7 @@ class HomeController extends Controller
         $article = Article::where('user_id', $id)->get();
         
 
-        return view('myblog',['article'=>$article]);
+        return view('my_blog',['article'=>$article]);
     }
 
     public function blog_delete($id){
@@ -106,7 +106,7 @@ class HomeController extends Controller
     public function user(){
         $user = User::where('role', '1')->get();
 
-        return view('user',['user'=>$user]);
+        return view('user_list',['user'=>$user]);
     }
 
     public function delete_user($id){
@@ -119,7 +119,7 @@ class HomeController extends Controller
     public function all_blog(){
         $article = Article::all();
 
-        return view('blog',['article'=>$article]);
+        return view('all_blog',['article'=>$article]);
     }
     
     public function delete_blog($id){
