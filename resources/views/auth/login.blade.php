@@ -17,8 +17,8 @@
                             <div class="col-md-6">
                                 
                                 <select class="form-control" id="role" type="role" class="form-control @error('role') is-invalid @enderror" name="role" value="{{ old('email') }}" required autocomplete="role" autofocus>
-                                    <option>User</option>
-                                    <option>Admin</option>
+                                    <option value="1">User</option>
+                                    <option value="2">Admin</option>
                                 </select>
                                 
                             </div>

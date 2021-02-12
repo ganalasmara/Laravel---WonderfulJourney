@@ -1,5 +1,15 @@
-.quote{
-    font-size: 30pt;
-    text-align: center;
-}
+.bg-main { 
+    /* The image used */
+    background-image: url("/img/bg.jpg");
+  
+    /* Full height */
+    height: 100vh;
+    overflow-x: hidden; 
+  
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
 
+  

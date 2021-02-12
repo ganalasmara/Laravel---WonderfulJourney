@@ -1,10 +1,12 @@
 @extends('layouts.main')
 
 @section('content')
+
+    <h1 style="padding-top: 50px" class="text-center">User List</h1>
     
-    <div class="container" style="padding-top: 150px">
+    <div class="container" style="padding-top: 50px">
         <div class="row">
-            <table class="table">
+            <table class="table table-dark table-bordered">
                 <thead>
                   <tr>
                     <th scope="col">Name</th>

@@ -1,7 +1,9 @@
 <?php
 
 namespace App\Http\Controllers\Auth;
-
+use Illuminate\Support\Facades\Auth;
+use App\User;
+use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
@@ -20,6 +22,15 @@ class LoginController extends Controller
     */
 
     use AuthenticatesUsers;
+
+    public function login(Request $req){
+        
+        if(Auth::attempt(['email' => $req['email'], 'password' => $req['password'], 'role'=> $req['role']])){
+            return redirect()->intended();
+        }
+
+        return back();
+    }
 
     /**
      * Where to redirect users after login.

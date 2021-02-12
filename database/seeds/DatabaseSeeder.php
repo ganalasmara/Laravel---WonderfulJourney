@@ -13,90 +13,68 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
-            [    'name'=>'admin',
-                 'email'=>'admin@gmail.com',
-                 'password'=> Hash::make('123123123'),
-                 'phone'=>'081223125412',
+      
+
+            DB::table('categories')->insert([
+                [
+                    'name'=>'Pegunungan'
+                ],
+                [
+                    'name'=>'Pantai'
+                ]
+            ]);
+
+            DB::table('users')->insert([
+            [    'name'=>'Tony Stark',
+                 'email'=>'testadmin@gmail.com',
+                 'password'=> Hash::make('12345678'),
+                 'phonenum'=>'081111111111',
                  'role'=>'2'
              ],
-             [    'name'=>'member',
-                 'email'=>'member@gmail.com',
-                 'password'=> Hash::make('123123123'),
-                 'phone'=>'08123123722',
+             [    'name'=>'Robert Downey',
+                 'email'=>'testuser@gmail.com',
+                 'password'=> Hash::make('12345678'),
+                 'phonenum'=>'0811111123231',
+                 'role'=>'1'
+            ],
+            [    'name'=>'Mark Wilson',
+                 'email'=>'testuser2@gmail.com',
+                 'password'=> Hash::make('12345678'),
+                 'phonenum'=>'081111112323',
                  'role'=>'1'
             ]
             ]);
 
-        DB::table('categories')->insert([
-            [
-                'name'=>'Mountain'
-            ],
-            [
-                'name'=>'Beach'
-            ]
-        ]);
-
         DB::table('articles')->insert([
             [
-                'title'=>'Gunung Agung',
-                'user_id'=>'1',
-                'categories_id'=>'1',
-                'description'=>'Gunung Agung adalah salah satu gunung paling terkenal dan terbesar di bali. Gunung Agung dapat didaki dengan lama perjalanan 8 Jam.',
-                'photo'=>'../img/gunungagung.jpg'
+                'title'=>'Gunung Semeru',
+                'user_id'=>'2',
+                'category_id'=>'1',
+                'description'=>'Terletak di jawa timur, gunung semeru merupakan salah satu gunung paling terkenal di Indonesia. Dengan ketinggian 3.676m, gunung ini merupakan salah satu gunung tersulit untuk didaki oleh pendaki indonesia',
+                'photo'=>'../img/semeru.jpg'
 
             ],
             [
-                'title'=>'Pantai Balangan',
-                'user_id'=>'2',
-                'categories_id'=>'2',
-                'description'=>'Pantai Balangan adalah salah satu pantai tersembunyi di Bali yang belakangan ini sedang ramai dibincangkan. Pantai yang memiliki tebing sebagai salah satu ikon unik nya memiliki banyak homestay yang bisa digunakan untuk para tourist yang ingin menginap di daerah Pantai Balangan.',
-                'photo'=>'../img/Pantai-Balangan.jpg'
+                'title'=>'Gunung Rinjani',
+                'user_id'=>'3',
+                'category_id'=>'1',
+                'description'=>'Terletak di lombok, Gunung rinjani adalah salah satu gunung paling indah di indonesia. Gunung favorit para pendaki dalam maupun luar ini selain indah, juga merupakan gunung yang paling mudah untuk didaki.',
+                'photo'=>'../img/rinjani.jpg'
             ],
             [
-                'title'=>'Gunung Agung',
+                'title'=>'Pantai Pandawa',
                 'user_id'=>'2',
-                'categories_id'=>'1',
-                'description'=>'Gunung Agung adalah salah satu gunung paling terkenal dan terbesar di bali. Gunung Agung dapat didaki dengan lama perjalanan 8 Jam.',
-                'photo'=>'../img/gunungagung.jpg'
+                'category_id'=>'2',
+                'description'=>'Tentu kamu tahu pantai ini! Pantai Pandawa adalah tempat favorit para turis lokal ketika pertama kali ke bali untuk berlibur! Pantai pandawa terkenal dengan tebing yang mengelilingin pantai.',
+                'photo'=>'../img/pandawa.jpg'
 
             ],
             [
-                'title'=>'Pantai Balangan',
-                'user_id'=>'1',
-                'categories_id'=>'2',
-                'description'=>'Pantai Balangan adalah salah satu pantai tersembunyi di Bali yang belakangan ini sedang ramai dibincangkan. Pantai yang memiliki tebing sebagai salah satu ikon unik nya memiliki banyak homestay yang bisa digunakan untuk para tourist yang ingin menginap di daerah Pantai Balangan.',
-                'photo'=>'../img/Pantai-Balangan.jpg'
-            ],
-            [
-                'title'=>'Gunung Agung',
-                'user_id'=>'2',
-                'categories_id'=>'1',
-                'description'=>'Gunung Agung adalah salah satu gunung paling terkenal dan terbesar di bali. Gunung Agung dapat didaki dengan lama perjalanan 8 Jam.',
-                'photo'=>'../img/gunungagung.jpg'
-
-            ],
-            [
-                'title'=>'Pantai Balangan',
-                'user_id'=>'1',
-                'categories_id'=>'2',
-                'description'=>'Pantai Balangan adalah salah satu pantai tersembunyi di Bali yang belakangan ini sedang ramai dibincangkan. Pantai yang memiliki tebing sebagai salah satu ikon unik nya memiliki banyak homestay yang bisa digunakan untuk para tourist yang ingin menginap di daerah Pantai Balangan.',
-                'photo'=>'../img/Pantai-Balangan.jpg'
-            ],
-            [
-                'title'=>'Gunung Agung',
-                'user_id'=>'1',
-                'categories_id'=>'1',
-                'description'=>'Gunung Agung adalah salah satu gunung paling terkenal dan terbesar di bali. Gunung Agung dapat didaki dengan lama perjalanan 8 Jam.',
-                'photo'=>'../img/gunungagung.jpg'
-
-            ],
-            [
-                'title'=>'Pantai Balangan',
-                'user_id'=>'2',
-                'categories_id'=>'2',
-                'description'=>'Pantai Balangan adalah salah satu pantai tersembunyi di Bali yang belakangan ini sedang ramai dibincangkan. Pantai yang memiliki tebing sebagai salah satu ikon unik nya memiliki banyak homestay yang bisa digunakan untuk para tourist yang ingin menginap di daerah Pantai Balangan.',
-                'photo'=>'../img/Pantai-Balangan.jpg'
+                'title'=>'Pantai Rahasia',
+                'user_id'=>'3',
+                'category_id'=>'2',
+                'description'=>'Pantai satu ini merupakan salah satu pantai terpencil dan rahasia di bali! Terletak di bagian timur bali, yang merupakan daerah yang sepi akan pariwisata.',
+                'photo'=>'../img/secretbeach.jpg'
             ]
         ]);
     }

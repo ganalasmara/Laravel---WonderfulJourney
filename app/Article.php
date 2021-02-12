@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Article extends Model
 {
     public function category(){
-        return $this->hasOne('App\Category','id','categories_id');
+        return $this->hasOne('App\Category','id','category_id');
     }
 
     public function user(){

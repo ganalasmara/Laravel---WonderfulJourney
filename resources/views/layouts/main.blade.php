@@ -20,39 +20,38 @@
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
+    <div class="bg-main">
     <div id="app">
+
+        
+        <span class="d-block p-4 bg-danger text-white text-center"> Wonderful Journey - Blog of Indonesia Tourism</span>
         
         @guest
-        <nav class="navbar fixed-top navbar-custom navbar-expand-lg navbar-light">
+        <nav class="navbar bg-primary navbar-custom navbar-expand-lg navbar-dark" style="color: white">
             <div class="container">
-                <a class="navbar-brand logo" href="/"><img src="/img/WJlogo.svg" style="" alt=""></a>
-                
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav text-white ml-auto mr-auto">
                     <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Category
+                          Kategori
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                          <a class="dropdown-item" href="/category/2">Beach</a>
-                          <a class="dropdown-item" href="/category/1">Mountain</a>
+                          <a class="dropdown-item" href="/category/2">Pantai</a>
+                          <a class="dropdown-item" href="/category/1">Pegunungan</a>
                         </div>
                       </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="/about">About Us</a>
+                    <a class="nav-link" href="/about">Tentang Kami</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="/register">Sign Up</a>
+                    <a class="nav-link" href="/register">Daftar</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="/login">Login</a>
+                    <a class="nav-link" href="/login">Masuk</a>
                     </li>
 
                 </ul>
@@ -63,16 +62,11 @@
 
         @auth
         @if(Auth::user()->role==1)
-        <nav class="navbar fixed-top navbar-custom navbar-expand-lg navbar-light">
+        <nav class="navbar bg-primary navbar-custom navbar-expand-lg navbar-dark" style="color: white">
             <div class="container">
-                <a class="navbar-brand logo" href="/"><img src="/img/WJlogo.svg" style="" alt=""></a>
-                
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav text-white ml-auto mr-auto">
                     <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
                     </li>
@@ -105,16 +99,11 @@
             </div>
         </nav>
         @elseif(Auth::user()->role==2)
-        <nav class="navbar fixed-top navbar-custom navbar-expand-lg navbar-light">
+        <nav class="navbar bg-primary navbar-custom navbar-expand-lg navbar-dark" style="color: white">
             <div class="container">
-                <a class="navbar-brand logo" href="/"><img src="/img/WJlogo.svg" style="" alt=""></a>
-                
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav text-white ml-auto mr-auto">
                     <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
                     </li>
@@ -155,6 +144,7 @@
         <main class="py-4">
             @yield('content')
         </main>
+    </div>
     </div>
 </body>
 </html>

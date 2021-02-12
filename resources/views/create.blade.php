@@ -18,8 +18,8 @@
                 <div class="form-group">
                     <label for="exampleInputEmail1">Category:</label>
                 <select class="form-control" id="category" type="role" class="form-control @error('role') is-invalid @enderror" name="category" value="{{ old('email') }}" required autocomplete="role" autofocus>
-                    <option>Mountain</option>
-                    <option>Beach</option>
+                    <option value="1">Mountain</option>
+                    <option value="2">Beach</option>
                 </select>
                 </div>
 

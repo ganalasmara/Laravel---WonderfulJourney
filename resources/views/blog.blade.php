@@ -2,9 +2,11 @@
 
 @section('content')
     
-    <div class="container" style="padding-top: 150px">
+    <h1 style="padding-top: 50px" class="text-center">Blog List</h1>
+
+    <div class="container" style="padding-top: 50px">
         <div class="row">
-            <table class="table">
+            <table class="table table-dark table-bordered">
                 <thead>
                   <tr>
                     <th scope="col">Title</th>

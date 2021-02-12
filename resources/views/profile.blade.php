@@ -2,7 +2,7 @@
 
 @section('content')
     
-    <div class="container" style="padding-top: 150px">
+    <div class="container justify-content-center d-flex text-center" style="padding-top: 50px">
         <div class="row">
             <form action="{{ route('update', ['id'=>$user->id]) }}" method="POST" enctype="multipart/form-data" >
                 @csrf
@@ -18,7 +18,7 @@
                 </div>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Phone:</label>
-                    <input name="phone" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{ $user->phone }}">
+                    <input name="phonenum" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{ $user->phonenum }}">
                     
                 </div>
                 <button type="submit" class="btn btn-primary">Update</button>
