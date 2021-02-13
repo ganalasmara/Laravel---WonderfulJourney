@@ -18,30 +18,29 @@ use Illuminate\Support\Facades\Auth;
 //     return view('welcome');
 // });
 
-Route::get('/login', 'HomeController@trylogin');
-Route::post('/login', 'HomeController@login')->name('logins');
+//PUBLIC
 Route::get('/home', function(){ return view('home'); });
-
-//GUEST
 Route::get('/', 'HomeController@index');
 Route::get('/detail/{id}', 'HomeController@detail');
 Route::get('/category/{id}', 'HomeController@category');
 
-//USER
-Route::get('/profile', 'HomeController@profile');
-Route::post('/profile/update/{id}', 'HomeController@profile_update')->name('update');
-Route::get('/myblog', 'HomeController@blog_list');
-Route::get('/myblog/delete/{id}', 'HomeController@blog_delete');
-Route::get('/create', 'HomeController@create');
-Route::post('/create', 'HomeController@create_blog')->name('create');
 
-//ADMIN
-Route::get('/user', 'HomeController@user');
-Route::get('/user/delete/{id}', 'HomeController@delete_user');
-Route::get('/blog', 'HomeController@all_blog');
-Route::get('/blog/delete/{id}', 'HomeController@delete_blog');
+Route::middleware(['user'])->group(function () {
+    Route::get('/profile', 'UserController@profile');
+    Route::post('/profile/update/{id}', 'UserController@profile_update')->name('update');
+    Route::get('/myblog', 'UserController@blog_list');
+    Route::get('/myblog/delete/{id}', 'UserController@blog_delete');
+    Route::get('/create', 'UserController@create');
+    Route::post('/create', 'UserController@create_blog')->name('create');
+});
 
 
+Route::middleware(['admin'])->group(function () {
+    Route::get('/user', 'AdminController@user');
+    Route::get('/user/delete/{id}', 'AdminController@delete_user');
+    Route::get('/blog', 'AdminController@all_blog');
+    Route::get('/blog/delete/{id}', 'AdminController@delete_blog');
+});
 
 Auth::routes();
 

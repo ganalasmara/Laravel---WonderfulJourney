@@ -12,4 +12,9 @@
     background-size: cover;
   }
 
-  
+  .card.scale {     
+    transition: all 0.2s ease-in-out; 
+  }  
+  .card:hover.scale {     
+    transform: scale(1.03);
+  }

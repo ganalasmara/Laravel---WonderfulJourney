@@ -17,65 +17,87 @@ class DatabaseSeeder extends Seeder
 
             DB::table('categories')->insert([
                 [
-                    'name'=>'Pegunungan'
+                    'name'=>'Mountain'
                 ],
                 [
-                    'name'=>'Pantai'
+                    'name'=>'Beach'
+                ],
+                [
+                    'name'=>'Culinary'
                 ]
             ]);
 
             DB::table('users')->insert([
-            [    'name'=>'Tony Stark',
-                 'email'=>'testadmin@gmail.com',
+            [    'name'=>'Admin 1',
+                 'email'=>'admin@gmail.com',
                  'password'=> Hash::make('12345678'),
-                 'phonenum'=>'081111111111',
+                 'phone'=>'081235125123',
                  'role'=>'2'
              ],
-             [    'name'=>'Robert Downey',
-                 'email'=>'testuser@gmail.com',
+             [    'name'=>'User 1',
+                 'email'=>'user@gmail.com',
                  'password'=> Hash::make('12345678'),
-                 'phonenum'=>'0811111123231',
+                 'phone'=>'087551234512',
                  'role'=>'1'
             ],
-            [    'name'=>'Mark Wilson',
-                 'email'=>'testuser2@gmail.com',
+            [    'name'=>'User 2',
+                 'email'=>'user2@gmail.com',
                  'password'=> Hash::make('12345678'),
-                 'phonenum'=>'081111112323',
+                 'phone'=>'082345125431',
                  'role'=>'1'
             ]
             ]);
 
         DB::table('articles')->insert([
             [
-                'title'=>'Gunung Semeru',
+                'title'=>'Ayam Betutu',
                 'user_id'=>'2',
-                'category_id'=>'1',
-                'description'=>'Terletak di jawa timur, gunung semeru merupakan salah satu gunung paling terkenal di Indonesia. Dengan ketinggian 3.676m, gunung ini merupakan salah satu gunung tersulit untuk didaki oleh pendaki indonesia',
-                'photo'=>'../img/semeru.jpg'
+                'category_id'=>'3',
+                'description'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu erat, mattis at interdum ut, consequat sit amet metus. Pellentesque fringilla elementum tellus. Cras et mattis purus, vitae elementum massa.',
+                'photo'=>'../img/ayambetutu.jpg'
 
             ],
             [
-                'title'=>'Gunung Rinjani',
-                'user_id'=>'3',
-                'category_id'=>'1',
-                'description'=>'Terletak di lombok, Gunung rinjani adalah salah satu gunung paling indah di indonesia. Gunung favorit para pendaki dalam maupun luar ini selain indah, juga merupakan gunung yang paling mudah untuk didaki.',
-                'photo'=>'../img/rinjani.jpg'
-            ],
-            [
-                'title'=>'Pantai Pandawa',
+                'title'=>'Mount Bromo',
                 'user_id'=>'2',
-                'category_id'=>'2',
-                'description'=>'Tentu kamu tahu pantai ini! Pantai Pandawa adalah tempat favorit para turis lokal ketika pertama kali ke bali untuk berlibur! Pantai pandawa terkenal dengan tebing yang mengelilingin pantai.',
-                'photo'=>'../img/pandawa.jpg'
+                'category_id'=>'1',
+                'description'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu erat, mattis at interdum ut, consequat sit amet metus. Pellentesque fringilla elementum tellus. Cras et mattis purus, vitae elementum massa.',
+                'photo'=>'../img/bromo.jpg'
 
             ],
             [
-                'title'=>'Pantai Rahasia',
+                'title'=>'Gudeg Jogja',
+                'user_id'=>'2',
+                'category_id'=>'3',
+                'description'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu erat, mattis at interdum ut, consequat sit amet metus. Pellentesque fringilla elementum tellus. Cras et mattis purus, vitae elementum massa.',
+                'photo'=>'../img/gudeg.jpg'
+
+            ],
+            [
+                'title'=>'Mount Agung',
+                'user_id'=>'3',
+                'category_id'=>'1',
+                'description'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu erat, mattis at interdum ut, consequat sit amet metus. Pellentesque fringilla elementum tellus. Cras et mattis purus, vitae elementum massa.',
+                'photo'=>'../img/gunungagung.jpg'
+
+            ],
+            [
+                'title'=>'Kuta Beach',
                 'user_id'=>'3',
                 'category_id'=>'2',
-                'description'=>'Pantai satu ini merupakan salah satu pantai terpencil dan rahasia di bali! Terletak di bagian timur bali, yang merupakan daerah yang sepi akan pariwisata.',
-                'photo'=>'../img/secretbeach.jpg'
+                'description'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu erat, mattis at interdum ut, consequat sit amet metus. Pellentesque fringilla elementum tellus. Cras et mattis purus, vitae elementum massa.',
+                'photo'=>'../img/pantaikuta.jpg'
+
+            ],
+            [
+                'title'=>'Pasir Putih Beach',
+                'user_id'=>'3',
+                'category_id'=>'2',
+                'description'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu erat, mattis at interdum ut, consequat sit amet metus. Pellentesque fringilla elementum tellus. Cras et mattis purus, vitae elementum massa.',
+                'photo'=>'../img/pantaipasirputih.jpg'
+
             ]
+            
         ]);
     }
 }

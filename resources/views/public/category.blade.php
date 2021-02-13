@@ -1,7 +1,7 @@
 @extends('layouts.main')
 
 @section('content')
-    <div class="container">
+    <div class="container text-white">
         <div class="row">
             <div class="col mt-5">
             <h1 class="text-center">{{ $category->name }}</h1>
@@ -19,8 +19,9 @@
                     <div class="card-body">
                       <h5 class="card-title font-weight-bold">{{ $r->title }}</h5>
                       <p class="card-text">{{ $r->description }}</p>
-                      <p>Category: @if($r->category_id==1) <a href="/category/1">Pegunungan</a>
-                        @else <a href="/category/2">Pantai</a>
+                      <p>Category: @if($r->category_id==1) <a href="/category/1">Mountain</a>
+                        @elseif($r->category_id==2) <a href="/category/2">Beach</a>
+                        @else <a href="/category/3">Culinary</a>
                         @endif
                       </p>
                       

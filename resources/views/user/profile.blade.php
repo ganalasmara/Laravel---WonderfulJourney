@@ -7,24 +7,22 @@
             <form action="{{ route('update', ['id'=>$user->id]) }}" method="POST" enctype="multipart/form-data" >
                 @csrf
                 <div class="form-group">
-                  <label for="exampleInputEmail1">Name:</label>
-                  <input name="name" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{ $user->name }}">
+                  <label>Name:</label>
+                  <input name="name" type="text" class="form-control"  placeholder="{{ $user->name }}">
                   
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Email:</label>
-                    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{ $user->email }}">
+                    <label>Email:</label>
+                    <input name="email" type="email" class="form-control"  placeholder="{{ $user->email }}">
                     
                 </div>
                 <div class="form-group">
-                    <label for="exampleInputEmail1">Phone:</label>
-                    <input name="phonenum" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="{{ $user->phonenum }}">
+                    <label>Phone:</label>
+                    <input name="phone" type="text" class="form-control"  placeholder="{{ $user->phone }}">
                     
                 </div>
                 <button type="submit" class="btn btn-primary">Update</button>
               </form>
         </div>
     </div>
-    
-
 @endsection

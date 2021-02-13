@@ -23,15 +23,7 @@ class LoginController extends Controller
 
     use AuthenticatesUsers;
 
-    public function login(Request $req){
-        
-        if(Auth::attempt(['email' => $req['email'], 'password' => $req['password'], 'role'=> $req['role']])){
-            return redirect()->intended();
-        }
-
-        return back();
-    }
-
+   
     /**
      * Where to redirect users after login.
      *
