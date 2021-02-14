@@ -1,8 +1,21 @@
 @extends('layouts.main')
 
 @section('content')
-    
+    @if ($errors->any())
+    <div class="alert alert-danger text-center">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+    @endif
+    @if(Session::has('successMsg'))
+    <div class="alert alert-success text-center"> {{ Session::get('successMsg') }}</div>
+    @endif
+    <h1 style="padding-top: 50px" class="text-center">Update Profile</h1>
     <div class="container justify-content-center d-flex text-center" style="padding-top: 50px">
+        
         <div class="row">
             <form action="{{ route('update', ['id'=>$user->id]) }}" method="POST" enctype="multipart/form-data" >
                 @csrf

@@ -4,7 +4,7 @@
     <div class="container text-white">
         <div class="row">
             <div class="col mt-5">
-            <h1 style="color: black" class="gentium text-center">{{ $category->name }}</h1>
+            <h1 style="color: black" class="gentium text-center">{{ $user->name }}</h1>
         </div>
         </div>
     

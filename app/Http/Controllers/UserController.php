@@ -1,5 +1,5 @@
 <?php
-
+// I MADE GANAL ASMARA JAYA - 2201799386
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -18,6 +18,12 @@ class UserController extends Controller
     }
 
     public function profile_update(Request $req,$id){
+        $validated = $req->validate([
+            'name' => ['string'],
+            'email' => ['string', 'email'],
+            'phone' => ['string'],
+           
+        ]);
         
         $user = Auth::user();
         if($req->name!=NULL) $user->name = $req->name;
@@ -25,23 +31,23 @@ class UserController extends Controller
         if($req->phone!=NULL) $user->phone = $req->phone;
         $user->save();
 
-        return back();
+        return back()->with('successMsg','Profile Updated!');
     }
 
-    public function blog_list(){
+    public function article(){
         $id = Auth::user()->id;
         $article = Article::where('user_id', $id)->get();
         
 
-        return view('user.blog_list',['article'=>$article]);
+        return view('user.article_list',['article'=>$article]);
     }
 
-    public function blog_delete($id){
+    public function article_delete($id){
 
         Article::where('id', $id)->delete();
         
 
-        return back();
+        return back()->with('successMsg','Article Deleted!');
     }
 
     public function create(){
@@ -49,7 +55,14 @@ class UserController extends Controller
         return view('user.create');
     }
 
-    public function create_blog(Request $req){
+    public function create_article(Request $req){
+
+        $validated = $req->validate([
+            'name' => ['required','string'],
+            'story' => ['required','string'],
+            'category' => ['required'],
+            'photo' => ['required','image']
+        ]);
         
         $user = Auth::user()->id;
         $article = new Article;
@@ -58,12 +71,12 @@ class UserController extends Controller
 
         $article->title = $req->name;
         $article->user_id = $user;
-        $article->description = $req->description;
+        $article->description = $req->story;
         $article->category_id = $req->category;
         $article->photo = '../img/' . $photo;
         $article->save();
         
 
-        return back();
+        return back()->with('successMsg','Blog Published!');
     }
 }

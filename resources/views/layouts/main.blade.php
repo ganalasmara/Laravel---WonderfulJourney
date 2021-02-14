@@ -13,16 +13,19 @@
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link rel="stylesheet" href="/css/main.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Gentium+Basic&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="bg-main">
+ 
     <div id="app">
 
         @guest
         <nav class="navbar navbar-custom navbar-expand-lg navbar-dark bg-dark" style="color: white">
             <div class="container">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav text-white mr-auto ml-auto">
+                <ul class="navbar-nav text-white mr-auto">
                     <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
                     </li>
@@ -32,13 +35,14 @@
                         </a>
                         <div class="dropdown-menu" >
                         <a class="dropdown-item" href="/category/2">Beach</a>
-                        <a class="dropdown-item" href="/category/3">Culinary</a>
                         <a class="dropdown-item" href="/category/1">Mountain</a>
                         </div>
                       </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="#">About Us</a>
+                    <a class="nav-link" href="/about">About Us</a>
                     </li>
+                </ul>
+                <ul class="navbar-nav text-white ml-auto">
            
                     <li class="nav-item">
                     <a class="nav-link" href="/register">Register</a>
@@ -57,7 +61,7 @@
         <nav class="navbar navbar-custom navbar-expand-lg navbar-dark bg-dark" style="color: white">
             <div class="container">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav text-white mr-auto ml-auto">
+                <ul class="navbar-nav text-white mr-auto">
                     <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
                     </li>
@@ -65,8 +69,10 @@
                      <a class="nav-link" href="/profile">Profile</a>
                     </li>
                     <li class="nav-item">
-                    <a class="nav-link" href="/myblog">Blog</a>
+                    <a class="nav-link" href="/article">Blog</a>
                     </li>
+                    </ul>
+                    <ul class="navbar-nav text-white ml-auto">
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}
@@ -93,7 +99,7 @@
         <nav class="navbar navbar-custom navbar-expand-lg navbar-dark bg-dark" style="color: white">
             <div class="container">
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav text-white mr-auto ml-auto">
+                <ul class="navbar-nav text-white mr-auto">
                     <li class="nav-item">
                     <a class="nav-link" href="/">Home</a>
                     </li>
@@ -103,6 +109,8 @@
                     <li class="nav-item">
                     <a class="nav-link" href="/user">User List</a>
                     </li>
+                </ul>
+                <ul class="navbar-nav text-white ml-auto">
                     <li class="nav-item dropdown">
                         <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                             {{ Auth::user()->name }}
@@ -130,6 +138,7 @@
             @yield('content')
         </main>
     </div>
-    </div>
+
+    <p class="text-center">Designed and Built by <a href="https://www.linkedin.com/in/ganalasmara/">Ganal Asmara</a> - 2201799386</p>
 </body>
 </html>

@@ -1,6 +1,9 @@
 @extends('layouts.main')
 
 @section('content')
+    @if(Session::has('successMsg'))
+    <div class="alert alert-danger text-center"> {{ Session::get('successMsg') }}</div>
+    @endif
 
     <h1 style="padding-top: 50px" class="text-center">User List</h1>
     
@@ -19,7 +22,7 @@
                   <tr>
                     <td>{{ $u->name }}</td>
                     <td>{{ $u->email }}</td>
-                    <td><a href="/user/delete/{{ $u->id }}" type="button" class="btn btn-primary">Delete</a></td>
+                    <td><a href="/user/delete/{{ $u->id }}" type="button" class="btn btn-danger">Delete</a></td>
                   </tr>
                     @endforeach
                 </tbody>

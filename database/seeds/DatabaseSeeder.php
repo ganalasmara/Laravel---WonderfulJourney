@@ -21,80 +21,99 @@ class DatabaseSeeder extends Seeder
                 ],
                 [
                     'name'=>'Beach'
-                ],
-                [
-                    'name'=>'Culinary'
                 ]
             ]);
 
             DB::table('users')->insert([
-            [    'name'=>'Admin 1',
+            [    'name'=>'Smiresh Lardi',
                  'email'=>'admin@gmail.com',
-                 'password'=> Hash::make('12345678'),
-                 'phone'=>'081235125123',
+                 'password'=> Hash::make('123123123'),
+                 'phone'=>'081772365812',
                  'role'=>'2'
              ],
-             [    'name'=>'User 1',
+             [    'name'=>'Markub Sinoor',
                  'email'=>'user@gmail.com',
-                 'password'=> Hash::make('12345678'),
-                 'phone'=>'087551234512',
+                 'password'=> Hash::make('123123123'),
+                 'phone'=>'081857182391',
                  'role'=>'1'
             ],
-            [    'name'=>'User 2',
+            [    'name'=>'Rajik Sinaat',
                  'email'=>'user2@gmail.com',
-                 'password'=> Hash::make('12345678'),
-                 'phone'=>'082345125431',
+                 'password'=> Hash::make('123123123'),
+                 'phone'=>'081775919237',
+                 'role'=>'1'
+            ],
+            [    'name'=>'Hana Macchia',
+                 'email'=>'user3@gmail.com',
+                 'password'=> Hash::make('123123123'),
+                 'phone'=>'018461825912',
                  'role'=>'1'
             ]
             ]);
 
         DB::table('articles')->insert([
             [
-                'title'=>'Ayam Betutu',
-                'user_id'=>'2',
-                'category_id'=>'3',
-                'description'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu erat, mattis at interdum ut, consequat sit amet metus. Pellentesque fringilla elementum tellus. Cras et mattis purus, vitae elementum massa.',
-                'photo'=>'../img/ayambetutu.jpg'
-
-            ],
-            [
-                'title'=>'Mount Bromo',
+                'title'=>'Mount Azari',
                 'user_id'=>'2',
                 'category_id'=>'1',
-                'description'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu erat, mattis at interdum ut, consequat sit amet metus. Pellentesque fringilla elementum tellus. Cras et mattis purus, vitae elementum massa.',
-                'photo'=>'../img/bromo.jpg'
+                'description'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis venenatis diam a varius. Suspendisse viverra tempor cursus. Proin a sem non dolor mollis congue. In hac habitasse platea dictumst. Nulla et ante quam. Phasellus gravida tortor sapien, quis gravida metus ornare a. Proin eleifend, sapien vitae tincidunt interdum, enim dolor interdum mi, ut laoreet urna turpis eget leo. Maecenas augue sem, hendrerit et odio vitae, posuere auctor turpis.',
+                'photo'=>'../img/mountain1.jpg'
 
             ],
             [
-                'title'=>'Gudeg Jogja',
+                'title'=>'Mount Solar',
                 'user_id'=>'2',
-                'category_id'=>'3',
-                'description'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu erat, mattis at interdum ut, consequat sit amet metus. Pellentesque fringilla elementum tellus. Cras et mattis purus, vitae elementum massa.',
-                'photo'=>'../img/gudeg.jpg'
+                'category_id'=>'1',
+                'description'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis venenatis diam a varius. Suspendisse viverra tempor cursus. Proin a sem non dolor mollis congue. In hac habitasse platea dictumst. Nulla et ante quam. Phasellus gravida tortor sapien, quis gravida metus ornare a. Proin eleifend, sapien vitae tincidunt interdum, enim dolor interdum mi, ut laoreet urna turpis eget leo. Maecenas augue sem, hendrerit et odio vitae, posuere auctor turpis.',
+                'photo'=>'../img/mountain2.jpg'
 
             ],
             [
-                'title'=>'Mount Agung',
+                'title'=>'Mount Rushmore',
                 'user_id'=>'3',
                 'category_id'=>'1',
-                'description'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu erat, mattis at interdum ut, consequat sit amet metus. Pellentesque fringilla elementum tellus. Cras et mattis purus, vitae elementum massa.',
-                'photo'=>'../img/gunungagung.jpg'
+                'description'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis venenatis diam a varius. Suspendisse viverra tempor cursus. Proin a sem non dolor mollis congue. In hac habitasse platea dictumst. Nulla et ante quam. Phasellus gravida tortor sapien, quis gravida metus ornare a. Proin eleifend, sapien vitae tincidunt interdum, enim dolor interdum mi, ut laoreet urna turpis eget leo. Maecenas augue sem, hendrerit et odio vitae, posuere auctor turpis.',
+                'photo'=>'../img/mountain3.jpg'
 
             ],
             [
-                'title'=>'Kuta Beach',
+                'title'=>'Mount Kami',
                 'user_id'=>'3',
-                'category_id'=>'2',
-                'description'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu erat, mattis at interdum ut, consequat sit amet metus. Pellentesque fringilla elementum tellus. Cras et mattis purus, vitae elementum massa.',
-                'photo'=>'../img/pantaikuta.jpg'
+                'category_id'=>'1',
+                'description'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis venenatis diam a varius. Suspendisse viverra tempor cursus. Proin a sem non dolor mollis congue. In hac habitasse platea dictumst. Nulla et ante quam. Phasellus gravida tortor sapien, quis gravida metus ornare a. Proin eleifend, sapien vitae tincidunt interdum, enim dolor interdum mi, ut laoreet urna turpis eget leo. Maecenas augue sem, hendrerit et odio vitae, posuere auctor turpis.',
+                'photo'=>'../img/mountain4.jpg'
 
             ],
             [
-                'title'=>'Pasir Putih Beach',
-                'user_id'=>'3',
+                'title'=>'Virgin Beach',
+                'user_id'=>'4',
                 'category_id'=>'2',
-                'description'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla arcu erat, mattis at interdum ut, consequat sit amet metus. Pellentesque fringilla elementum tellus. Cras et mattis purus, vitae elementum massa.',
-                'photo'=>'../img/pantaipasirputih.jpg'
+                'description'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis venenatis diam a varius. Suspendisse viverra tempor cursus. Proin a sem non dolor mollis congue. In hac habitasse platea dictumst. Nulla et ante quam. Phasellus gravida tortor sapien, quis gravida metus ornare a. Proin eleifend, sapien vitae tincidunt interdum, enim dolor interdum mi, ut laoreet urna turpis eget leo. Maecenas augue sem, hendrerit et odio vitae, posuere auctor turpis.',
+                'photo'=>'../img/beach1.jpg'
+
+            ],
+            [
+                'title'=>'Recari Beach',
+                'user_id'=>'4',
+                'category_id'=>'2',
+                'description'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis venenatis diam a varius. Suspendisse viverra tempor cursus. Proin a sem non dolor mollis congue. In hac habitasse platea dictumst. Nulla et ante quam. Phasellus gravida tortor sapien, quis gravida metus ornare a. Proin eleifend, sapien vitae tincidunt interdum, enim dolor interdum mi, ut laoreet urna turpis eget leo. Maecenas augue sem, hendrerit et odio vitae, posuere auctor turpis.',
+                'photo'=>'../img/beach2.jpg'
+
+            ],
+            [
+                'title'=>'Somar Beach',
+                'user_id'=>'2',
+                'category_id'=>'2',
+                'description'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis venenatis diam a varius. Suspendisse viverra tempor cursus. Proin a sem non dolor mollis congue. In hac habitasse platea dictumst. Nulla et ante quam. Phasellus gravida tortor sapien, quis gravida metus ornare a. Proin eleifend, sapien vitae tincidunt interdum, enim dolor interdum mi, ut laoreet urna turpis eget leo. Maecenas augue sem, hendrerit et odio vitae, posuere auctor turpis.',
+                'photo'=>'../img/beach3.jpg'
+
+            ],
+            [
+                'title'=>'Landar Beach',
+                'user_id'=>'1',
+                'category_id'=>'2',
+                'description'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris iaculis venenatis diam a varius. Suspendisse viverra tempor cursus. Proin a sem non dolor mollis congue. In hac habitasse platea dictumst. Nulla et ante quam. Phasellus gravida tortor sapien, quis gravida metus ornare a. Proin eleifend, sapien vitae tincidunt interdum, enim dolor interdum mi, ut laoreet urna turpis eget leo. Maecenas augue sem, hendrerit et odio vitae, posuere auctor turpis.',
+                'photo'=>'../img/beach4.jpg'
 
             ]
             

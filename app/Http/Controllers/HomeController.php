@@ -1,5 +1,5 @@
 <?php
-
+// I MADE GANAL ASMARA JAYA - 2201799386
 namespace App\Http\Controllers;
 use App\Article;
 use App\Category;
@@ -25,9 +25,22 @@ class HomeController extends Controller
 
     public function index()
     {
-        $article = Article::all();
+        $article = Article::paginate(6);
+        $category = Category::all();
 
-        return view('welcome',['article'=>$article]);
+        return view('welcome',['article'=>$article],['category'=>$category]);
+    }
+
+    public function about(){
+
+        return view('public.about');
+    }
+
+    public function author($id){
+        $article = Article::where('user_id',$id)->get();
+        $user = User::findOrfail($id);
+
+        return view('public.author',['article'=>$article],['user'=>$user]);
     }
 
     public function detail($id)

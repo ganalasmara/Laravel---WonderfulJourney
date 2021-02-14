@@ -1,5 +1,5 @@
 <?php
-
+// I MADE GANAL ASMARA JAYA - 2201799386
 namespace App\Http\Controllers;
 use App\Article;
 use App\Category;
@@ -20,7 +20,7 @@ class AdminController extends Controller
         Article::where('user_id', $id)->delete();
         User::findOrfail($id)->delete();
 
-        return back();
+        return back()->with('successMsg','User Deleted!');
     }
 
     public function all_blog(){
@@ -32,6 +32,6 @@ class AdminController extends Controller
     public function delete_blog($id){
         Article::where('id', $id)->delete();
 
-        return back();
+        return back()->with('successMsg','Article Deleted!');
     }
 }

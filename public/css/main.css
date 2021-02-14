@@ -18,3 +18,48 @@
   .card:hover.scale {     
     transform: scale(1.03);
   }
+
+  .centered {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .gentium{
+    font-family: Gentium;
+  }
+ 
+  a:link {
+
+
+    text-decoration: none;
+  
+  
+  }
+  
+  
+  a:visited {
+  
+  
+    text-decoration: none;
+  
+  
+  }
+  
+  
+  a:hover {
+  
+  
+    text-decoration: none;
+  
+  
+  }
+  
+  
+  a:active {
+  
+    
+    text-decoration: none;
+  
+  
+  }

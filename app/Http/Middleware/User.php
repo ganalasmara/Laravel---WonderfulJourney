@@ -18,6 +18,6 @@ class User
         if(Auth::check()){
             if(Auth::user()->role==1) return $next($request);
         }
-        return redirect('login');
+        return redirect('homepage');
     }
 }
