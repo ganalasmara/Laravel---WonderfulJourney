@@ -14,7 +14,7 @@
     <div class="alert alert-success text-center"> {{ Session::get('successMsg') }}</div>
     @endif
     <h1 style="padding-top: 50px" class="text-center">Create Article</h1>
-    <div class="container text-black" style="padding-top: 150px">
+    <div class="container text-black" style="padding-top: 50px">
       
         <div class="row">
             

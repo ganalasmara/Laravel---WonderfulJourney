@@ -5,7 +5,7 @@
     <div class="alert alert-danger text-center"> {{ Session::get('successMsg') }}</div>
     @endif
     <h1 style="padding-top: 50px" class="text-center">My Article List</h1>
-    <div class="container text-center" style="padding-top: 150px">
+    <div class="container text-center" style="padding-top: 50px">
         <div class="row">
             <td><a href="/create" type="button" class="btn btn-primary mb-3">Create Article</a></td>
             <table class="table table-hover table-dark table-bordered">
